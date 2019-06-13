@@ -62,10 +62,55 @@ function Pidenota(b){
 
 }
 
+let carros =[{marca:"toyota",valor: 1000, tipo:"ligero"},
+            {marca:"kia",valor : 30000, tipo:"camioneta"},
+            {marca:"hino",valor:25000, tipo:"bus"}] 
+
+
+function update(){
+    for (var i=0; i<carros.length; i++){
+        
+        if (carros[i].marca === "kia") {
+            carros[i].tipo="ligero";
+        }        
+    }
+    console.log(carros)
+}
+const array2d = [["yasser", "diego"], ["Sofia", "Pablo"]]
+
+function searchNameDiego () {
+    for(var i = 0; i < array2d.length; i++){
+        for(var j = 0; j < array2d.length; j++){
+            if(array2d[i][j] === "diego"){
+                console.log(array2d[i][j])
+            }
+        }
+    }
+}
+
+let computadoras =[{marca:"hp",costo: 1000, tipo:"laptop", accesorios:["mouse","usb"]},
+            {marca:"toshiba",valor : 3000, tipo:"laptop",accesorios:["mouse","parlantes"]},
+            {marca:"sansung",valor:2500, tipo:"escritorio",accesorios:["mouse","usb","teclado"]}];
+            
+function parlantes(){
+    for(var i=0;i<computadoras.length; i++){
+        for(var j = 0; j < computadoras.length; j++){
+        if (computadoras[i].accesorios==="parlantes"){
+            console.log(computadoras[i][j])
+        }
+    }
+}
+}           
+
+
+
+
+
+
 //console.log(miArreglo)
 //console.log("Tamano de mi arreglo", miArreglo.length)
 
 //console.log("Tamano de mi arreglo  " + miArreglo.length)
 
-console.log("hola no me jodas");
+//console.log("hola no me jodas");
 
