@@ -88,19 +88,52 @@ function searchNameDiego () {
     }
 }
 
-let computadoras =[{marca:"hp",costo: 1000, tipo:"laptop", accesorios:["mouse","usb"]},
+
+//array de computadoras
+let computadoras =[{marca:"hp", valor: 1000, tipo:"laptop", accesorios:["mouse","usb"]},
             {marca:"toshiba",valor : 3000, tipo:"laptop",accesorios:["mouse","parlantes"]},
             {marca:"sansung",valor:2500, tipo:"escritorio",accesorios:["mouse","usb","teclado"]}];
-            
+
+// buscar dentro de computadoras los accesorios de parlantes
 function parlantes(){
-    for(var i=0;i<computadoras.length; i++){
-        for(var j = 0; j < computadoras.length; j++){
-        if (computadoras[i].accesorios==="parlantes"){
-            console.log(computadoras[i][j])
+    var computadora = ""
+    for(var i=0; i < computadoras.length; i++){
+        //console.log(computadoras[i])
+        var arrayAccesorios = computadoras[i].accesorios;
+        for(var j = 0; j < arrayAccesorios.length; j ++){
+            if(arrayAccesorios[j] === "parlantes"){
+                //console.log(computadoras[i])
+                computadora = computadoras[i];
+            }
+        }
+    }
+     if(computadora !== ""){
+        console.log("Se encontro la computadora: " + computadora.marca + " que tiene el accesorio: " + computadora.accesorios[1])
+    }else{
+        console.log("no encontro")
+    } 
+}
+
+//eliminar la computadora marca HP
+function delete_PC_HP (){
+    for(var i=0; i < computadoras.length; i++){
+        if(computadoras[i].marca === "hp"){
+            //console.log(computadoras[i]) 
+               delete computadoras[i];
+        }
+    }
+    console.log(computadoras)
+}
+
+// deborver las comnpus max 400 
+
+function CompusEconomicas (){
+    for(var i=0; i < computadoras.length; i++){
+        if(computadoras[i].valor <= 2800){
+            console.log(computadoras[i]);
         }
     }
 }
-}           
 
 
 
